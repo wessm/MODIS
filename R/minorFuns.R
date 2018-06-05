@@ -719,7 +719,7 @@ ModisFileDownloader <- function(x, opts = NULL, ...)
               extra <- if (method == "wget") {
                 paste("--load-cookies", ofl
                       , "--save-cookies", ofl
-                      , "--keep-session-cookie --no-check-certificate")
+                      , "--keep-session-cookie --no-check-certificate --user anja.klisch --password AnjaKlisch1")
                 # curl extras
               } else {
                 paste('-n -L -c', ofl, '-b', ofl)
