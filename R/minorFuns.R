@@ -738,7 +738,7 @@ ModisFileDownloader <- function(x, opts = NULL, ...)
 
             out[a] <- try(
               download.file(url = infile, destfile = destfile, mode = 'wb',
-                            method = method, quiet = opts$quiet,
+                            method = method, quiet = FALSE, #opts$quiet,
                             cacheOK = FALSE, extra = extra),
                           silent = TRUE)
           }
