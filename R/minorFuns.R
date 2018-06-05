@@ -601,7 +601,7 @@ filesUrl <- function(url)
       # download website to opts$auxPath
       file_out <- paste0(opts$auxPath, "/index.html")
       jnk <- capture.output(
-        download.file(url = url, destfile = file_out, quiet = FALSE, method = "wget", extra=paste0('--load-cookies ~/.cookies.txt --save-cookies ~/.cookies.txt --keep-session-cookie --no-check-certificate'))
+        download.file(url,destfile = dest, method = 'curl', extra=paste0('-n -L -c ~/.cookies.txt -b ~/.cookies.txt'))
       )
 
       # extract information from website content
